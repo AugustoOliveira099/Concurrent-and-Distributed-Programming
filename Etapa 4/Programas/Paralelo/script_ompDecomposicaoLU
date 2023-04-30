@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#SBATCH --job-name=omp_LU
+#SBATCH --time=0-10:0
+#SBATCH --cpus-per-task=8
+#SBATCH --hint=compute_bound
+#SBATCH --exclusive
+
+./pascalanalyzer -c 2,4,8,16 -i 4000,6000,8000,12000,16000 ./omp_decomposicaoLU -o omp_decomposicaoLU_teste1.json
